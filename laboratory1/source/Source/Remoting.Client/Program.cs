@@ -1,4 +1,4 @@
-﻿using Grpc.Core;
+﻿using System.Net.Http.Headers;
 using Grpc.Net.Client;
 using SpaceRemoving;
 
@@ -8,13 +8,19 @@ namespace Remoting.Client
     {
         static async Task Main(string[] args)
         {
-            using var channel = NamedPipesConnectionFactory.CreateChannel("MyPipe");
+            using var channel = GrpcChannel.ForAddress("http://localhost:9090", new GrpcChannelOptions()
+            {
+                HttpClient = new HttpClient()
+                {
+                    DefaultRequestVersion = new Version(1, 1)
+                }
+            });
 
             var spaceRemovingClient = new ExtraSpaceRemovingService.ExtraSpaceRemovingServiceClient(channel);
 
             while (true)
             {
-                Console.WriteLine("Write string to remove spaces from OR 'q' to exit applicaiton");
+                Console.WriteLine("Write string to remove spaces from OR 'q' to exit application");
 
                 var input = Console.ReadLine();
 
@@ -35,10 +41,7 @@ namespace Remoting.Client
                     ContentString = input,
                 };
 
-                var response = await spaceRemovingClient.RemoveExtraSpacesAsync(request, new CallOptions()
-                {
-                    
-                });
+                var response = await spaceRemovingClient.RemoveExtraSpacesAsync(request);
 
                 Console.WriteLine("Space removing result:");
                 Console.WriteLine(response.ContentString);

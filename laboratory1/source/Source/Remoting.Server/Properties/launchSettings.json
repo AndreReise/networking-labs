@@ -2,11 +2,10 @@
   "profiles": {
     "Remoting.Server": {
       "commandName": "Project",
-      "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://pipe:/MyPipe;"
+      "applicationUrl": "http://+:9090;"
     }
   }
 }

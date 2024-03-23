@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package Sample;
+
+message FindMaxElementRequest{
+	repeated int32 values = 1; 
+}
+
+message FindMaxElementResponse{
+	int32 result = 1; 
+}

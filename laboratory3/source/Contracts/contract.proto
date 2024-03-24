@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package SpaceRemoving;
+
+message RemoveExtraSpacesRequest{
+	string contentString = 1;
+};
+
+message RemoveExtraSpacesResponse{
+	string contentString = 1;
+}
+
+service ExtraSpaceRemovingService{
+	rpc RemoveExtraSpaces(RemoveExtraSpacesRequest) returns (RemoveExtraSpacesResponse);
+}

@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{4FF9B92E-8BD3-454F-BC42-0BF79D856257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remoting.Server", "Source\Remoting.Server\Remoting.Server.csproj", "{4F3CCA3A-B8EC-4C09-8F2E-560C9FA820C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{44BDF99E-F02B-4C10-9DC8-2CBF97EBECBA}"
+	ProjectSection(SolutionItems) = preProject
+		Contracts\contract.proto = Contracts\contract.proto
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remoting.Client", "Source\Remoting.Client\Remoting.Client.csproj", "{19E2834D-00A3-4F64-8DB3-7FA371EB5AC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F3CCA3A-B8EC-4C09-8F2E-560C9FA820C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F3CCA3A-B8EC-4C09-8F2E-560C9FA820C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F3CCA3A-B8EC-4C09-8F2E-560C9FA820C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F3CCA3A-B8EC-4C09-8F2E-560C9FA820C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19E2834D-00A3-4F64-8DB3-7FA371EB5AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19E2834D-00A3-4F64-8DB3-7FA371EB5AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19E2834D-00A3-4F64-8DB3-7FA371EB5AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19E2834D-00A3-4F64-8DB3-7FA371EB5AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F3CCA3A-B8EC-4C09-8F2E-560C9FA820C6} = {4FF9B92E-8BD3-454F-BC42-0BF79D856257}
+		{19E2834D-00A3-4F64-8DB3-7FA371EB5AC5} = {4FF9B92E-8BD3-454F-BC42-0BF79D856257}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D1615D0-24DA-484F-A0E0-41124191AF92}
+	EndGlobalSection
+EndGlobal
